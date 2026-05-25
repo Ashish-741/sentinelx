@@ -1,0 +1,80 @@
+/* Scan History Page Styling */
+
+.history-page {
+  /* No extra padding — DashboardLayout handles outer spacing */
+}
+
+.history-header {
+  margin-bottom: 2rem;
+}
+
+.history-header h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.history-header p {
+  color: #a0aec0;
+}
+
+.scans-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scan-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.scan-main {
+  flex: 1;
+}
+
+.scan-type {
+  display: inline-block;
+  background-color: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.scan-target {
+  color: #cbd5e0;
+  font-size: 0.95rem;
+}
+
+.scan-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.scan-confidence {
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+.scan-date {
+  color: #718096;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .scan-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .scan-meta {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

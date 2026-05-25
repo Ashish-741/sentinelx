@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ML models
+ml-service/models/*.pkl
+ml-service/models/*.joblib
+
+# Logs
+*.log
+logs/
+
+# Docker
+.docker/
+
+# Hugging Face deployment repo
+sentinelx-ml-service/

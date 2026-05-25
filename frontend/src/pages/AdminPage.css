@@ -1,0 +1,86 @@
+/* Admin Page Styling */
+
+.admin-page {
+  /* No extra padding — DashboardLayout handles outer spacing */
+}
+
+.admin-header {
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.admin-header p {
+  color: #a0aec0;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.tab:hover {
+  color: #00d4ff;
+}
+
+.tab.active {
+  color: #00d4ff;
+  border-bottom-color: #00d4ff;
+}
+
+.admin-content {
+  margin-top: 2rem;
+}
+
+.admin-content h3 {
+  color: #00d4ff;
+  margin-bottom: 1.5rem;
+}
+
+.users-table {
+  padding: 0;
+}
+
+.user-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.user-row:last-child {
+  border-bottom: none;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.username {
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+}
+
+.email {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0 0;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SentinelX</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo"></div>
+    <h1>SentinelX</h1>
+  </div>
+
+  <div id="setup-view" class="view hidden">
+    <p>Configure your API Key</p>
+    <input type="password" id="api-key" placeholder="snx_..." />
+    <input type="text" id="api-url" placeholder="http://localhost:5000/api" value="http://localhost:5000/api" />
+    <button id="save-btn" class="btn primary">Save Configuration</button>
+  </div>
+
+  <div id="main-view" class="view hidden">
+    <div class="status-box">
+      <span class="status-indicator online"></span> Ready to scan
+    </div>
+    
+    <div class="current-tab-info">
+      <p id="current-url" class="truncate">...</p>
+    </div>
+
+    <button id="scan-tab-btn" class="btn primary">Scan Current Page</button>
+    
+    <div id="result-box" class="hidden">
+      <div id="result-badge" class="badge">UNKNOWN</div>
+      <p id="result-score" class="score">Score: 0</p>
+      <p id="result-details" class="details"></p>
+    </div>
+
+    <button id="reset-btn" class="btn secondary small mt-4">Reset Config</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

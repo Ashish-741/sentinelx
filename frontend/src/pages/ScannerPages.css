@@ -1,0 +1,125 @@
+/* Scanner Pages Styling (URL Scanner + Email Analyzer) */
+
+.scanner-page {
+  /* No extra padding — DashboardLayout handles outer spacing */
+}
+
+.scanner-header {
+  margin-bottom: 1.5rem;
+}
+
+.scanner-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.scanner-header p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.scanner-card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.scanner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.email-textarea {
+  background-color: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  resize: vertical;
+  min-height: 200px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.email-textarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.15);
+}
+
+.result-card {
+  padding: 1.5rem;
+}
+
+.result-card h3 {
+  color: #00d4ff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.risk-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  margin: 0.75rem 0;
+}
+
+.risk-badge[data-risk="safe"] {
+  background-color: rgba(0, 255, 136, 0.15);
+  color: #00ff88;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.risk-badge[data-risk="suspicious"] {
+  background-color: rgba(255, 170, 0, 0.15);
+  color: #ffaa00;
+  border: 1px solid rgba(255, 170, 0, 0.3);
+}
+
+.risk-badge[data-risk="dangerous"] {
+  background-color: rgba(255, 51, 102, 0.15);
+  color: #ff3366;
+  border: 1px solid rgba(255, 51, 102, 0.3);
+}
+
+.threats-list {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 212, 255, 0.08);
+}
+
+.threats-list h4 {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.threats-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.threats-list li {
+  color: #cbd5e1;
+  padding: 0.4rem 0 0.4rem 1.5rem;
+  position: relative;
+  font-size: 0.85rem;
+}
+
+.threats-list li:before {
+  content: "⚠";
+  position: absolute;
+  left: 0;
+  color: #ffaa00;
+}

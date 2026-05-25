@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "SentinelX",
+  "version": "1.0",
+  "description": "Scan links instantly with SentinelX.",
+  "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
+  "host_permissions": ["*://localhost/*", "*://*.sentinelx.app/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
