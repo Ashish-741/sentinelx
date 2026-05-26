@@ -78,12 +78,6 @@ def prepare_features(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
     for url, label in zip(df["url"], df["label"], strict=False):
         try:
             feats = extract_features(url, skip_whois=True)
-            # Synthesize domain age to avoid blocking on 10,000 WHOIS network lookups
-            if label == 1:
-                feats["domain_age_days"] = float(random.randint(0, 30))
-            else:
-                feats["domain_age_days"] = float(random.randint(365, 3650))
-                
             features_list.append(feats)
             labels.append(label)
         except Exception as exc:

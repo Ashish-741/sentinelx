@@ -250,7 +250,7 @@ FEATURE_NAMES: list[str] = [
     "num_exclamation", "num_digits", "num_subdomains", "path_length",
     "has_https", "has_ip_address", "has_at_symbol", "is_shortened",
     "domain_length", "has_suspicious_tld", "entropy", "has_suspicious_keywords",
-    "is_typosquatting", "digit_to_letter_ratio", "has_port", "domain_age_days",
+    "is_typosquatting", "digit_to_letter_ratio", "has_port",
 ]
 
 # Backward-compatible alias used by older imports
