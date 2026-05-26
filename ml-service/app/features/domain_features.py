@@ -46,9 +46,16 @@ def get_domain_info(domain: str) -> Dict[str, Any]:
         return result
 
     try:
+        import socket
         import whois  # type: ignore[import-untyped]
 
-        w = whois.whois(domain)
+        # Set a short default timeout (3.0s) for the socket to prevent WHOIS from hanging
+        original_timeout = socket.getdefaulttimeout()
+        socket.setdefaulttimeout(3.0)
+        try:
+            w = whois.whois(domain)
+        finally:
+            socket.setdefaulttimeout(original_timeout)
 
         # --- Creation date ---
         creation = w.creation_date
