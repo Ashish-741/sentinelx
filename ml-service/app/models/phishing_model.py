@@ -124,7 +124,7 @@ class PhishingDetector:
             )
 
         # 1. Extract features
-        features = extract_features(url)
+        features = extract_features(url, skip_whois=True)
 
         # 2. Build ordered feature vector
         feature_vector = np.array(
