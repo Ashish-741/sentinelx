@@ -34,7 +34,7 @@ services:
       - JWT_SECRET=${JWT_SECRET:-sentinelx-super-secret-jwt-key-2026}
       - JWT_EXPIRES_IN=7d
       - FRONTEND_URL=http://localhost:5173
-      - ML_SERVICE_URL=http://ml-service:8000
+      - ML_SERVICE_URL=http://ml-service:7860
       - VIRUSTOTAL_API_KEY=${VIRUSTOTAL_API_KEY:-}
       - ABUSEIPDB_API_KEY=${ABUSEIPDB_API_KEY:-}
       - IPINFO_TOKEN=${IPINFO_TOKEN:-}
