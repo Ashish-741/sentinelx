@@ -45,6 +45,12 @@ def get_domain_info(domain: str) -> Dict[str, Any]:
         result["error"] = "Invalid domain provided"
         return result
 
+    import os
+    if os.environ.get("SPACE_ID") or os.environ.get("SKIP_WHOIS", "false").lower() == "true":
+        result["error"] = "WHOIS lookup skipped in Hugging Face Space or disabled by environment"
+        # Set age to -1 or None. The caller handles None.
+        return result
+
     try:
         import socket
         import whois  # type: ignore[import-untyped]
