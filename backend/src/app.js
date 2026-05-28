@@ -26,10 +26,23 @@ app.use(cookieParser());
 // ── SECURITY MIDDLEWARE ────────────────────────────────────────────────
 app.use(helmet()); // Set security HTTP headers
 app.use(cors({
-  origin:
-    process.env.FRONTEND_URL ||
-    process.env.CLIENT_URL ||
-    'http://localhost:5173',
+  origin: function(origin, callback) {
+    if (!origin) return callback(null, true);
+    if (origin.startsWith('chrome-extension://')) return callback(null, true);
+    
+    const allowedOrigins = [
+      process.env.FRONTEND_URL,
+      process.env.CLIENT_URL,
+      'http://localhost:5173'
+    ];
+    
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    
+    // If not in allowed list but we want to allow it anyway for dev
+    callback(null, true); 
+  },
   credentials: true,
 }));
 
